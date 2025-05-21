@@ -128,14 +128,14 @@
               class="btn btn-primary p-3 text-bg-primary w-100 text-end fw-bold fs-5"
               type="button"
               data-bs-toggle="collapse"
-              data-bs-target="#addNewUserForm"
+              data-bs-target="#add-new-user-form"
             >
               <span class="me-2">Add new user</span>
               <i class="bi bi-plus-square"></i>
             </button>
             <form
               class="collapse p-5 text-bg-light needs-validation"
-              id="addNewUserForm"
+              id="add-new-user-form"
               action="/submit"
               method="POST"
               novalidate
@@ -151,32 +151,35 @@
                       type="email"
                       class="form-control"
                       id="email"
+                      name="email"
                       required
                     />
                     <div class="invalid-feedback">Email required.</div>
                   </div>
                   <div class="col-12 col-xl-4 mt-4 mt-xl-0">
-                    <label class="form-label" for="firstName">
+                    <label class="form-label" for="first-name">
                       First Name
                       <span class="text-danger ms-1">*</span>
                     </label>
                     <input
                       type="text"
                       class="form-control"
-                      id="firstName"
+                      id="first-name"
+                      name="first-name"
                       required
                     />
                     <div class="invalid-feedback">First name required.</div>
                   </div>
                   <div class="col-12 col-xl-4 mt-4 mt-xl-0">
-                    <label class="form-label" for="lastName">
+                    <label class="form-label" for="last-name">
                       Last Name
                       <span class="text-danger ms-1">*</span>
                     </label>
                     <input
                       type="text"
                       class="form-control"
-                      id="lastName"
+                      id="last-name"
+                      name="last-name"
                       required
                     />
                     <div class="invalid-feedback">Last name required.</div>
@@ -187,10 +190,15 @@
                     <label class="form-label" for="birthday"
                       >Date of Birth</label
                     >
-                    <input type="date" class="form-control" id="birthday" />
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="birthday"
+                      name="DOB"
+                    />
                   </div>
                   <div class="col-12 col-lg-6 col-xl-4 mt-4 mt-lg-0">
-                    <label class="form-label" for="phoneNumber">
+                    <label class="form-label" for="phone-number">
                       Phone Number
                       <span class="text-danger ms-1">*</span>
                     </label>
@@ -200,7 +208,8 @@
                       pattern="[0-9]{10}"
                       maxlength="10"
                       class="form-control"
-                      id="phoneNumber"
+                      id="phone-number"
+                      name="phone"
                       required
                     />
                     <div class="invalid-feedback">Phone number required.</div>
@@ -211,31 +220,47 @@
                 <lengend class="fs-5">Address</lengend>
                 <div class="row mt-4">
                   <div class="col-12 col-xl-6">
-                    <label class="form-label" for="addressLine1"
+                    <label class="form-label" for="address-line-1"
                       >Street Address</label
                     >
-                    <input type="text" class="form-control" id="addressLine1" />
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="address-line-1"
+                      name="address-line-1"
+                    />
                   </div>
                   <div class="col-12 col-xl-6 mt-4 mt-xl-0">
-                    <label class="form-label" for="addressLine2"
+                    <label class="form-label" for="address-line-2"
                       >Address Line 2</label
                     >
-                    <input type="text" class="form-control" id="addressLine2" />
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="address-line-2"
+                      name="address-line-2"
+                    />
                   </div>
                 </div>
                 <div class="row mt-4">
                   <div class="col-12 col-lg-5">
-                    <label class="form-label" for="addressCity">City</label>
-                    <input type="text" class="form-control" id="addressCity" />
+                    <label class="form-label" for="address-city">City</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="address-city"
+                      name="city"
+                    />
                   </div>
                   <div class="col-5 col-lg-3 mt-4 mt-lg-0">
-                    <label class="form-label" for="addressState">State</label>
+                    <label class="form-label" for="address-state">State</label>
                     <input
                       type="text"
                       class="form-control"
                       maxlength="2"
-                      id="addressState"
+                      id="address-state"
                       list="stateList"
+                      name="state"
                     />
                     <datalist id="stateList">
                       <option value="AL"></option>
@@ -247,23 +272,29 @@
                     </datalist>
                   </div>
                   <div class="col-7 col-lg-4 mt-4 mt-lg-0">
-                    <label class="form-label" for="addressZip">Zip</label>
+                    <label class="form-label" for="address-zip">Zip</label>
                     <input
                       type="text"
                       name="zipcode"
                       pattern="[0-9]{5}"
                       maxlength="5"
                       class="form-control"
-                      id="addressZip"
+                      id="address-zip"
+                      name="zip"
                     />
                   </div>
                 </div>
               </fieldset>
               <div class="col-12 col-xl-6">
-                <label class="form-label mt-5" for="userRole"
+                <label class="form-label mt-5" for="user-role"
                   >Set User Role <span class="text-danger ms-1">*</span></label
                 >
-                <select class="form-select" id="userRole" required>
+                <select
+                  class="form-select"
+                  id="user-role"
+                  name="user-role"
+                  required
+                >
                   <option value="" selected>Select Role</option>
                   <option value="admin">Admin</option>
                   <option value="user">User</option>
